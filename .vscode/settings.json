@@ -1,0 +1,38 @@
+{
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.path": "/usr/bin/clangd",
+    "clangd.arguments": [
+        "--log=verbose",
+        "--query-driver=/usr/bin/c++",
+        "--compile-commands-dir=${workspaceFolder}"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.a.cmd": true,
+        "**/*.o.cmd": true,
+        "**/*.o.d": true,
+        "**/*.o": true,
+        "**/*.a": true,
+        "**/*.builtin": true,
+        "**/*.cmd": true,
+        "**/*.order": true,
+        "**/*.ko.cmd": true,
+        "**/*.mod.c": true,
+        "**/*.symvers": true,
+        "**/.tmp_versions": true,
+        "**/.Module.symvers.cmd": true,
+        "**/.modules.order.cmd": true,
+        "**/*.mod.cmd": true,
+        "**/build.config.*": true,
+        "**/*.builtin.modinfo": true,
+        "**/.tmp_*": true,
+        "**/*.mod": true
+    },
+    "editor.inlayHints.enabled": "off"
+}
