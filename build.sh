@@ -3,15 +3,15 @@
 set -x
 
 SOURCE_DIR=`pwd`
-BUILD_DIR=${BUILD_DIR:-../build}
+BUILD_DIR=${BUILD_DIR:-./build}
 BUILD_TYPE=${BUILD_TYPE:-release}
-INSTALL_DIR=${INSTALL_DIR:-../${BUILD_TYPE}-install-cpp11}
+INSTALL_DIR=${INSTALL_DIR:-./${BUILD_TYPE}-install-cpp11}
 CXX=${CXX:-g++}
 
-ln -sf $BUILD_DIR/$BUILD_TYPE-cpp11/compile_commands.json
+ln -sf $BUILD_DIR/compile_commands.json
 
-mkdir -p $BUILD_DIR/$BUILD_TYPE-cpp11 \
-  && cd $BUILD_DIR/$BUILD_TYPE-cpp11 \
+mkdir -p $BUILD_DIR \
+  && cd $BUILD_DIR \
   && cmake \
            -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
            -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR \
