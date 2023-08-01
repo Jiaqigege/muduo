@@ -20,7 +20,7 @@ Tested on:
 
 Install required packages:
   # Debian, Ubuntu, etc.
-  $ sudo apt install g++ cmake make libboost-dev
+  $ sudo apt install gcc g++ build-essential cmake make libboost-dev libboost-test-dev libcurl4-openssl-dev libc-ares-dev protobuf-compiler libprotobuf-dev
   # CentOS
   $ sudo yum install gcc-c++ cmake make boost-devel
 
