@@ -41,4 +41,5 @@
         "-DCMAKE_INSTALL_PREFIX=./install"
     ],
     "cmake.buildDirectory": "${workspaceFolder}/build",
+    "editor.formatOnSave": false,
 }
