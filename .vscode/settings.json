@@ -4,9 +4,16 @@
     "clangd.path": "/usr/bin/clangd",
     "clangd.arguments": [
         "--log=verbose",
-        "--query-driver=/usr/bin/c++",
+        "--query-driver=/usr/bin/c++,/usr/bin/g++",
         "--compile-commands-dir=${workspaceFolder}"
     ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureArgs": [
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_INSTALL_PREFIX=./install"
+    ],
+    "editor.formatOnSave": false,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -34,12 +41,4 @@
         "**/.tmp_*": true,
         "**/*.mod": true
     },
-    "editor.inlayHints.enabled": "off",
-    "cmake.configureArgs": [
-        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
-        "-DCMAKE_BUILD_TYPE=Debug",
-        "-DCMAKE_INSTALL_PREFIX=./install"
-    ],
-    "cmake.buildDirectory": "${workspaceFolder}/build",
-    "editor.formatOnSave": false,
 }
