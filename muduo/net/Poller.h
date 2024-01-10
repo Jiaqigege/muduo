@@ -57,6 +57,10 @@ class Poller : noncopyable
     ownerLoop_->assertInLoopThread();
   }
 
+  // 由于fillActiveChannels在派生类中被声明为私有方法，
+  // 这意味着该方法可能只是被派生类内部使用，而不是作为一个公共接口。
+  // 因此不需要在基类中声明。
+  // void fillActiveChannels(int numEvents, ChannelList* activeChannels) const = 0;
  protected:
   typedef std::map<int, Channel*> ChannelMap;
   ChannelMap channels_;
